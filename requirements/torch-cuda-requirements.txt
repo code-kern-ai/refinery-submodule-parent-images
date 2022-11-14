@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements/torch-cuda-requirements.in
 #
---extra-index-url https://download.pytorch.org/whl/cu116
+--extra-index-url https://download.pytorch.org/whl/cu113
 
 anyio==3.6.2
     # via starlette

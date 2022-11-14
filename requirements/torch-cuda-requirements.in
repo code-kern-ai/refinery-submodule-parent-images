@@ -1,4 +1,4 @@
---extra-index-url https://download.pytorch.org/whl/cu116
+--extra-index-url https://download.pytorch.org/whl/cu113
 -r common-requirements.in
 torch==1.12.1
 transformers==4.23.1
