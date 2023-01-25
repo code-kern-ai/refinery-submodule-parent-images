@@ -90,9 +90,9 @@ def git_delete_branch(path_to_repo: str, include_sudo=False):
     current_path = os.getcwd()
     os.chdir(path_to_repo)
     if include_sudo:
-        os.system("sudo git branch -d parent-image-update")
+        os.system("sudo git branch -D parent-image-update")
     else:
-        os.system("git branch -d parent-image-update")
+        os.system("git branch -D parent-image-update")
     os.chdir(current_path)
 
 
@@ -116,3 +116,14 @@ def open_pr_page(repo_name: str):
         f"https://github.com/code-kern-ai/{repo_name}/compare/dev...parent-image-update"
     )
     webbrowser.open(final_url, new=0, autoraise=True)
+
+
+def pip_compile_requirements(path_to_repo: str):
+    current_path = os.getcwd()
+    os.chdir(path_to_repo)
+    os.system("pip-compile --output-file=requirements.txt requirements/requirements.in")
+    os.chdir(current_path)
+
+
+def more_power():
+    os.system("sudo setfacl -R -m u:jens:rwx /repos")
