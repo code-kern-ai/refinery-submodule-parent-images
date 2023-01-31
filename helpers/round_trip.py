@@ -5,7 +5,9 @@ from export_requirement_files import export_requirements
 from change_docker_file import change_docker_file
 
 
-def run_logic_for(repoArray, requirements_txt, parent_image, include_sudo, power_mode):
+def run_logic_for(
+    repoArray, requirements_txt, parent_image, include_sudo, power_mode, gpu
+):
     existing, missing = helper_functions.build_paths(repoArray)
 
     if len(missing) > 0:
@@ -40,7 +42,7 @@ def run_logic_for(repoArray, requirements_txt, parent_image, include_sudo, power
             helper_functions.more_power()
         export_requirements(path, requirements_txt)
         helper_functions.pip_compile_requirements(path)
-        change_docker_file(path, parent_image)
+        change_docker_file(path, parent_image, gpu)
         helper_functions.git_push_branch(path, include_sudo)
         helper_functions.open_pr_page(path.split("/")[-1])
 
@@ -73,6 +75,7 @@ if __name__ == "__main__":
             settings.MINI_PARENT_IMAGE.format(version=version),
             include_sudo,
             power_mode,
+            gpu=False,
         )
     elif update_type == "common":
         run_logic_for(
@@ -81,6 +84,7 @@ if __name__ == "__main__":
             settings.COMMON_PARENT_IMAGE.format(version=version),
             include_sudo,
             power_mode,
+            gpu=False,
         )
     elif update_type == "exec_env":
         run_logic_for(
@@ -89,6 +93,7 @@ if __name__ == "__main__":
             settings.EXEC_ENV_PARENT_IMAGE.format(version=version),
             include_sudo,
             power_mode,
+            gpu=False,
         )
     elif update_type == "torch_cpu":
         run_logic_for(
@@ -97,6 +102,16 @@ if __name__ == "__main__":
             settings.TORCH_CPU_PARENT_IMAGE.format(version=version),
             include_sudo,
             power_mode,
+            gpu=False,
+        )
+    elif update_type == "torch_gpu":
+        run_logic_for(
+            settings.TORCH_GPU,
+            settings.TORCH_GPU_REQUIREMENTS,
+            settings.TORCH_GPU_PARENT_IMAGE.format(version=version),
+            include_sudo,
+            power_mode,
+            gpu=True,
         )
     elif update_type == "all":
         run_logic_for(

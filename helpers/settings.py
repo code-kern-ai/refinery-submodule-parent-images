@@ -33,7 +33,12 @@ TORCH_CPU = [
     "refinery-zero-shot",
 ]
 
-ALL_SERVICES = MINI + COMMON + EXEC_ENV + TORCH_CPU
+TORCH_GPU = [
+    "refinery-embedder",
+    "refinery-zero-shot",
+]
+
+ALL_SERVICES = MINI + COMMON + EXEC_ENV + TORCH_CPU + TORCH_GPU
 
 ###
 # Set up the paths to the repos of the different services, if the services are not
@@ -49,14 +54,18 @@ MINI_PATHS = [(service, os.path.join(REPO_DIR, service)) for service in MINI]
 COMMON_PATHS = [(service, os.path.join(REPO_DIR, service)) for service in COMMON]
 EXEC_ENV_PATHS = [(service, os.path.join(REPO_DIR, service)) for service in EXEC_ENV]
 TORCH_CPU_PATHS = [(service, os.path.join(REPO_DIR, service)) for service in TORCH_CPU]
+TORCH_GPU_PATHS = [(service, os.path.join(REPO_DIR, service)) for service in TORCH_GPU]
 
-ALL_SERVICE_PATHS = MINI_PATHS + COMMON_PATHS + EXEC_ENV_PATHS + TORCH_CPU_PATHS
+ALL_SERVICE_PATHS = (
+    MINI_PATHS + COMMON_PATHS + EXEC_ENV_PATHS + TORCH_CPU_PATHS + TORCH_GPU_PATHS
+)
 
 ###
 # Names of the dockerfiles
 ###
 DOCKERFILE = "Dockerfile"
 DEV_DOCKERFILE = "dev.Dockerfile"
+GPU_DOCKERFILE = "gpu.Dockerfile"
 
 ###
 # Format strings docker parent images
@@ -65,6 +74,7 @@ MINI_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-mini"
 COMMON_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-common"
 EXEC_ENV_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-exec-env"
 TORCH_CPU_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-torch-cpu"
+TORCH_GPU_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-torch-cuda"
 
 ###
 # Requirements files
@@ -75,3 +85,4 @@ MINI_REQUIREMENTS = "mini-requirements.txt"
 COMMON_REQUIREMENTS = "common-requirements.txt"
 EXEC_ENV_REQUIREMENTS = "exec-env-requirements.txt"
 TORCH_CPU_REQUIREMENTS = "torch-cpu-requirements.txt"
+TORCH_GPU_REQUIREMENTS = "torch-cuda-requirements.txt"

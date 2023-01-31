@@ -2,11 +2,16 @@ import os
 import settings
 
 
-def change_docker_file(service_path: str, parent_image: str) -> None:
-    docker_file = os.path.join(service_path, settings.DOCKERFILE)
-    dev_docker_file = os.path.join(service_path, settings.DEV_DOCKERFILE)
+def change_docker_file(service_path: str, parent_image: str, gpu: bool = False) -> None:
 
-    for file in [dev_docker_file, docker_file]:
+    docker_files = []
+    if not gpu:
+        docker_files.append(os.path.join(service_path, settings.DOCKERFILE))
+        docker_files.append(os.path.join(service_path, settings.DEV_DOCKERFILE))
+    else:
+        docker_files.append(os.path.join(service_path, settings.GPU_DOCKERFILE))
+
+    for file in docker_files:
         if not os.path.exists(file):
             continue
 
