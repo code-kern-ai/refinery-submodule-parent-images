@@ -60,6 +60,8 @@ if __name__ == "__main__":
     v = input("Do you need sudo rights for git interaction? (Y/N) ")
     if v in ["y", "Y"]:
         include_sudo = True
+    else:
+        include_sudo = False
 
     version = input("Enter the version of the parent image: ")
     if version[0] != "v":
