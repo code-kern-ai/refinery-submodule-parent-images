@@ -8,6 +8,7 @@ def change_docker_file(service_path: str, parent_image: str, gpu: bool = False) 
     if not gpu:
         docker_files.append(os.path.join(service_path, settings.DOCKERFILE))
         docker_files.append(os.path.join(service_path, settings.DEV_DOCKERFILE))
+        docker_files.append(os.path.join(service_path, settings.RELEASE_DOCKERFILE))
     else:
         docker_files.append(os.path.join(service_path, settings.GPU_DOCKERFILE))
 
@@ -20,7 +21,7 @@ def change_docker_file(service_path: str, parent_image: str, gpu: bool = False) 
 
         with open(file, "w") as f:
             for line in lines:
-                if line.startswith("FROM"):
+                if line.startswith("FROM kernai/refinery-parent-images"):
                     f.write(f"FROM {parent_image}\n")
                 else:
                     f.write(line)
