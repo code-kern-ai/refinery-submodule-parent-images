@@ -18,6 +18,9 @@ COMMON = [
     "refinery-updater",
     "refinery-weak-supervisor",
     "refinery-model-provider",
+    "gates-gateway",
+    "workflow-engine",
+    "workflow-engine-proxy",
 ]
 
 
@@ -25,6 +28,8 @@ EXEC_ENV = [
     "refinery-ac-exec-env",
     "refinery-lf-exec-env",
     "refinery-record-ide-env",
+    "gates-runtime",
+    "workflow-code-exec-env",
 ]
 
 TORCH_CPU = [
@@ -66,6 +71,8 @@ ALL_SERVICE_PATHS = (
 DOCKERFILE = "Dockerfile"
 DEV_DOCKERFILE = "dev.Dockerfile"
 GPU_DOCKERFILE = "gpu.Dockerfile"
+RELEASE_DOCKERFILE = "Dockerfile.release"
+
 
 ###
 # Format strings docker parent images
