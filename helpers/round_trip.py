@@ -26,6 +26,7 @@ def run_logic_for(
 
         helper_functions.git_checkout_dev(path, include_sudo)
         helper_functions.git_pull(path, include_sudo)
+        helper_functions.git_update_submodules(path, include_sudo)
         helper_functions.git_purge_all(path, include_sudo)
         if helper_functions.git_check_local_branch_exist(path):
             print("Branch parent-image-update already exists")

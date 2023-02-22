@@ -72,7 +72,7 @@ DOCKERFILE = "Dockerfile"
 DEV_DOCKERFILE = "dev.Dockerfile"
 GPU_DOCKERFILE = "gpu.Dockerfile"
 RELEASE_DOCKERFILE = "Dockerfile.release"
-
+SMODULES_FILE = "smodules"
 
 ###
 # Format strings docker parent images

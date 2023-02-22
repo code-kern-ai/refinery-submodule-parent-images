@@ -3,6 +3,7 @@ import os
 import sys
 import webbrowser
 import subprocess
+from settings import SMODULES_FILE
 
 
 def build_paths(arr):
@@ -43,6 +44,23 @@ def git_pull(path_to_repo: str, include_sudo=False):
     else:
         os.system("git pull")
     os.chdir(current_path)
+
+def git_update_submodules(path_to_repo: str, include_sudo=False):
+    smodules_file = os.path.join(path_to_repo, SMODULES_FILE)
+
+    if not os.path.exists(smodules_file):
+        return
+    
+    current_path = os.getcwd()
+    os.chdir(path_to_repo)
+    if include_sudo:
+        os.system("sudo bash smodules init")
+        os.system("sudo bash smodules pull")
+    else:
+        os.system("bash smodules init")
+        os.system("bash smodules pull")
+    os.chdir(current_path)
+    
 
 
 def git_reset_hard(path_to_repo: str, include_sudo=False):
@@ -118,10 +136,13 @@ def open_pr_page(repo_name: str):
     webbrowser.open(final_url, new=0, autoraise=True)
 
 
-def pip_compile_requirements(path_to_repo: str):
+def pip_compile_requirements(path_to_repo: str, for_lina: bool = False):
     current_path = os.getcwd()
     os.chdir(path_to_repo)
-    os.system("pip-compile --output-file=requirements.txt requirements/requirements.in")
+    if for_lina:
+        os.system("python -m piptools compile --output-file=requirements.txt requirements/requirements.in")
+    else:
+        os.system("pip-compile --output-file=requirements.txt requirements/requirements.in")
     os.chdir(current_path)
 
 
