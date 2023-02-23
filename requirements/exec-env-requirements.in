@@ -20,3 +20,4 @@ openai==0.25.0
 bayesian_optimization==1.4.2
 google-search-results==2.4.1
 vaderSentiment==3.3.2
+textacy==0.12.0
