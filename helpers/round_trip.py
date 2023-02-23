@@ -42,13 +42,13 @@ def run_logic_for(
         if power_mode:
             helper_functions.more_power()
         export_requirements(path, requirements_txt)
-        helper_functions.pip_compile_requirements(path)
+        helper_functions.pip_compile_requirements(path, gpu)
         change_docker_file(path, parent_image, gpu)
         helper_functions.git_push_branch(path, include_sudo)
         helper_functions.open_pr_page(path.split("/")[-1])
 
 
-update_type_options = ["mini", "common", "exec_env", "torch_cpu", "all"]
+update_type_options = ["mini", "common", "exec_env", "torch_cpu", "torch_gpu"]
 
 if __name__ == "__main__":
     power_mode = False
@@ -114,35 +114,7 @@ if __name__ == "__main__":
             power_mode,
             gpu=True,
         )
-    elif update_type == "all":
-        run_logic_for(
-            settings.MINI,
-            settings.MINI_REQUIREMENTS,
-            settings.MINI_PARENT_IMAGE.format(version=version),
-            include_sudo,
-            power_mode,
-        )
-        run_logic_for(
-            settings.COMMON,
-            settings.COMMON_REQUIREMENTS,
-            settings.COMMON_PARENT_IMAGE.format(version=version),
-            include_sudo,
-            power_mode,
-        )
-        run_logic_for(
-            settings.EXEC_ENV,
-            settings.EXEC_ENV_REQUIREMENTS,
-            settings.EXEC_ENV_PARENT_IMAGE.format(version=version),
-            include_sudo,
-            power_mode,
-        )
-        run_logic_for(
-            settings.TORCH_CPU,
-            settings.TORCH_CPU_REQUIREMENTS,
-            settings.TORCH_CPU_PARENT_IMAGE.format(version=version),
-            include_sudo,
-            power_mode,
-        )
+
     else:
         print("Invalid argument")
         exit(1)

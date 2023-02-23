@@ -45,12 +45,13 @@ def git_pull(path_to_repo: str, include_sudo=False):
         os.system("git pull")
     os.chdir(current_path)
 
+
 def git_update_submodules(path_to_repo: str, include_sudo=False):
     smodules_file = os.path.join(path_to_repo, SMODULES_FILE)
 
     if not os.path.exists(smodules_file):
         return
-    
+
     current_path = os.getcwd()
     os.chdir(path_to_repo)
     if include_sudo:
@@ -60,7 +61,6 @@ def git_update_submodules(path_to_repo: str, include_sudo=False):
         os.system("bash smodules init")
         os.system("bash smodules pull")
     os.chdir(current_path)
-    
 
 
 def git_reset_hard(path_to_repo: str, include_sudo=False):
@@ -136,13 +136,27 @@ def open_pr_page(repo_name: str):
     webbrowser.open(final_url, new=0, autoraise=True)
 
 
-def pip_compile_requirements(path_to_repo: str, for_lina: bool = False):
+def pip_compile_requirements(path_to_repo: str, gpu: bool, for_lina: bool = False):
     current_path = os.getcwd()
     os.chdir(path_to_repo)
-    if for_lina:
-        os.system("python -m piptools compile --output-file=requirements.txt requirements/requirements.in")
+    if gpu:
+        if for_lina:
+            os.system(
+                "python -m piptools compile --output-file=gpu-requirements.txt requirements/gpu-requirements.in"
+            )
+        else:
+            os.system(
+                "pip-compile --output-file=gpu-requirements.txt requirements/gpu-requirements.in"
+            )
     else:
-        os.system("pip-compile --output-file=requirements.txt requirements/requirements.in")
+        if for_lina:
+            os.system(
+                "python -m piptools compile --output-file=requirements.txt requirements/requirements.in"
+            )
+        else:
+            os.system(
+                "pip-compile --output-file=requirements.txt requirements/requirements.in"
+            )
     os.chdir(current_path)
 
 
