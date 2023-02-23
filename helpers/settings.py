@@ -18,6 +18,7 @@ COMMON = [
     "refinery-updater",
     "refinery-weak-supervisor",
     "refinery-model-provider",
+    "refinery-commercial-proxy",
     "gates-gateway",
     "workflow-engine",
     "workflow-engine-proxy",
