@@ -4,8 +4,6 @@
 #
 #    pip-compile exec-env-requirements.in
 #
-bayesian-optimization==1.4.2
-    # via -r exec-env-requirements.in
 beautifulsoup4==4.11.1
     # via -r exec-env-requirements.in
 better-profanity==0.7.0
@@ -29,8 +27,6 @@ click==8.1.3
     #   nltk
     #   translate
     #   typer
-colorama==0.4.6
-    # via bayesian-optimization
 confection==0.0.4
     # via thinc
 cymem==2.0.7
@@ -62,6 +58,7 @@ joblib==1.2.0
     # via
     #   nltk
     #   scikit-learn
+    #   scikit-optimize
     #   textacy
 langcodes==3.3.0
     # via spacy
@@ -94,11 +91,11 @@ num2words==0.5.12
 numpy==1.23.4
     # via
     #   -r exec-env-requirements.in
-    #   bayesian-optimization
     #   blis
     #   openai
     #   pandas
     #   scikit-learn
+    #   scikit-optimize
     #   scipy
     #   spacy
     #   textacy
@@ -115,7 +112,7 @@ pandas==1.5.3
     # via
     #   lexmo
     #   openai
-pandas-stubs==1.5.3.230214
+pandas-stubs==1.5.3.230227
     # via openai
 pathy==0.10.1
     # via spacy
@@ -125,6 +122,8 @@ preshed==3.0.8
     # via
     #   spacy
     #   thinc
+pyaml==21.10.1
+    # via scikit-optimize
 pydantic==1.10.5
     # via
     #   confection
@@ -141,6 +140,8 @@ python-levenshtein==0.20.8
     # via -r exec-env-requirements.in
 pytz==2022.7.1
     # via pandas
+pyyaml==6.0
+    # via pyaml
 quantulum3==0.7.11
     # via -r exec-env-requirements.in
 rapidfuzz==2.13.7
@@ -160,12 +161,14 @@ requests==2.28.1
 scikit-learn==1.1.2
     # via
     #   -r exec-env-requirements.in
-    #   bayesian-optimization
+    #   scikit-optimize
     #   textacy
+scikit-optimize==0.9.0
+    # via -r exec-env-requirements.in
 scipy==1.10.1
     # via
-    #   bayesian-optimization
     #   scikit-learn
+    #   scikit-optimize
     #   textacy
 six==1.16.0
     # via
