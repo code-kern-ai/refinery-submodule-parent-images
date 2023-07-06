@@ -9,6 +9,7 @@ MINI = [
     "refinery-config",
     "refinery-doc-ock",
     "refinery-gateway-proxy",
+    "platform-monitoring",
 ]
 
 COMMON = [
