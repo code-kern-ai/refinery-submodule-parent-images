@@ -22,7 +22,8 @@ COMMON = [
     "refinery-commercial-proxy",
     "gates-gateway",
     "workflow-engine",
-    "workflow-engine-proxy",
+    "chat-gateway",
+    "paper-gateway",
 ]
 
 
@@ -32,6 +33,7 @@ EXEC_ENV = [
     "refinery-record-ide-env",
     "gates-runtime",
     "workflow-code-exec-env",
+    "chat-exec-env",
 ]
 
 TORCH_CPU = [
