@@ -167,7 +167,7 @@ pymeeus==0.5.12
     # via
     #   convertdate
     #   holidays
-pypdf2==3.0.1
+pypdf==3.15.5
     # via -r exec-env-requirements.in
 pyphen==0.14.0
     # via
@@ -267,7 +267,7 @@ typing-extensions==4.7.1
     # via
     #   inflect
     #   pydantic
-    #   pypdf2
+    #   pypdf
     #   sqlalchemy
 tzdata==2023.3
     # via pandas
