@@ -59,3 +59,15 @@ Services:
 Extends the common image with an installation of torch with cuda support.
 
 Same services as torch-cpu
+
+### next
+
+The next parent image is used for ui services based on NextJS and use Node 18.
+
+Services:
+
+- gates-ui
+- workflow-ui
+- admin-dashboard
+- chat-ui
+- paper-ui

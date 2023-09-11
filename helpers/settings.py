@@ -47,6 +47,14 @@ TORCH_GPU = [
     "refinery-zero-shot",
 ]
 
+NEXT = [
+    "gates-ui",
+    "workflow-ui",
+    "admin-dashboard",
+    "chat-ui",
+    "paper-ui",
+]
+
 ALL_SERVICES = MINI + COMMON + EXEC_ENV + TORCH_CPU + TORCH_GPU
 
 ###
@@ -86,6 +94,7 @@ COMMON_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-common"
 EXEC_ENV_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-exec-env"
 TORCH_CPU_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-torch-cpu"
 TORCH_GPU_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-torch-cuda"
+NEXT_PARENT_IMAGE = "kernai/refinery-parent-images:{version}-next"
 
 ###
 # Requirements files
@@ -97,3 +106,4 @@ COMMON_REQUIREMENTS = "common-requirements.txt"
 EXEC_ENV_REQUIREMENTS = "exec-env-requirements.txt"
 TORCH_CPU_REQUIREMENTS = "torch-cpu-requirements.txt"
 TORCH_GPU_REQUIREMENTS = "torch-cuda-requirements.txt"
+NEXT_REQUIREMENTS = "package.json"

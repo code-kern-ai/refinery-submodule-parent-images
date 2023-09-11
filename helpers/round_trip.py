@@ -6,7 +6,14 @@ from change_docker_file import change_docker_file
 
 
 def run_logic_for(
-    repoArray, requirements_txt, parent_image, include_sudo, power_mode, gpu
+    repoArray,
+    requirements_txt,
+    parent_image,
+    include_sudo,
+    power_mode,
+    gpu,
+    requirements_type="pip",
+    version=None,
 ):
     existing, missing = helper_functions.build_paths(repoArray)
 
@@ -41,14 +48,20 @@ def run_logic_for(
         helper_functions.git_create_branch(path, include_sudo)
         if power_mode:
             helper_functions.more_power()
-        export_requirements(path, requirements_txt)
-        helper_functions.pip_compile_requirements(path, gpu)
+        if requirements_type == "pip":
+            export_requirements(path, requirements_txt)
+            helper_functions.pip_compile_requirements(path, gpu)
+        elif requirements_type == "npm":
+            helper_functions.merge_npm_package_dependencies(path, version)
+        else:
+            print("Invalid requirements type")
+            exit(1)
         change_docker_file(path, parent_image, gpu)
         helper_functions.git_push_branch(path, include_sudo)
         helper_functions.open_pr_page(path.split("/")[-1])
 
 
-update_type_options = ["mini", "common", "exec_env", "torch_cpu", "torch_gpu"]
+update_type_options = ["mini", "common", "exec_env", "torch_cpu", "torch_gpu", "next"]
 
 if __name__ == "__main__":
     power_mode = False
@@ -113,6 +126,17 @@ if __name__ == "__main__":
             include_sudo,
             power_mode,
             gpu=True,
+        )
+    elif update_type == "next":
+        run_logic_for(
+            settings.NEXT,
+            settings.NEXT_REQUIREMENTS,
+            settings.NEXT_PARENT_IMAGE.format(version=version),
+            include_sudo,
+            power_mode,
+            gpu=False,
+            requirements_type="npm",
+            version=version,
         )
 
     else:

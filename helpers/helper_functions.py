@@ -1,8 +1,9 @@
 import pathlib
 import os
-import sys
 import webbrowser
 import subprocess
+import requests
+import json
 from settings import SMODULES_FILE
 
 
@@ -129,7 +130,6 @@ def git_push_branch(path_to_repo: str, include_sudo=False):
 
 
 def open_pr_page(repo_name: str):
-
     final_url = (
         f"https://github.com/code-kern-ai/{repo_name}/compare/dev...parent-image-update"
     )
@@ -162,3 +162,27 @@ def pip_compile_requirements(path_to_repo: str, gpu: bool, for_lina: bool = Fals
 
 def more_power():
     os.system("sudo setfacl -R -m u:jens:rwx /repos")
+
+
+def merge_npm_package_dependencies(path_to_repo: str, version: str):
+    url = f"https://raw.githubusercontent.com/code-kern-ai/refinery-next-parent-image/{version}/package.json"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        parent_packages = json.loads(response.content)
+    else:
+        print(
+            f"Failed to download package.json from parent image. Status code: {response.status_code}"
+        )
+        exit(1)
+
+    with open(os.path.join(path_to_repo, "package.json"), "r") as f:
+        package = json.load(f)
+
+    package["dependencies"] = {
+        **package["dependencies"],
+        **parent_packages["dependencies"],
+    }
+
+    with open(os.path.join(path_to_repo, "package.json"), "w") as f:
+        json.dump(package, f, indent=2)
