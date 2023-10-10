@@ -167,8 +167,6 @@ pymeeus==0.5.12
     # via
     #   convertdate
     #   holidays
-pypdf==3.15.5
-    # via -r exec-env-requirements.in
 pyphen==0.14.0
     # via
     #   textacy
@@ -188,7 +186,9 @@ quantulum3==0.7.11
 rapidfuzz==2.15.1
     # via levenshtein
 regex==2023.8.8
-    # via nltk
+    # via
+    #   nltk
+    #   tiktoken
 requests==2.31.0
     # via
     #   -r exec-env-requirements.in
@@ -198,6 +198,7 @@ requests==2.31.0
     #   spacy
     #   sumy
     #   textacy
+    #   tiktoken
     #   translate
     #   vadersentiment
 scikit-learn==1.1.2
@@ -249,6 +250,8 @@ thinc==8.1.12
     # via spacy
 threadpoolctl==3.2.0
     # via scikit-learn
+tiktoken==0.5.1
+    # via -r exec-env-requirements.in
 toolz==0.12.0
     # via cytoolz
 tqdm==4.66.1
@@ -267,11 +270,10 @@ typing-extensions==4.7.1
     # via
     #   inflect
     #   pydantic
-    #   pypdf
     #   sqlalchemy
 tzdata==2023.3
     # via pandas
-urllib3==2.0.4
+urllib3==2.0.6
     # via requests
 vadersentiment==3.3.2
     # via -r exec-env-requirements.in
