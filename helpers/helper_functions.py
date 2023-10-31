@@ -123,8 +123,8 @@ def git_push_branch(path_to_repo: str, include_sudo=False):
         os.system("sudo git commit -m 'new parent image'")
         os.system("sudo git push --set-upstream origin parent-image-update")
     else:
-        os.system("sudo git add .")
-        os.system("sudo git commit -m 'new parent image'")
+        os.system("git add .")
+        os.system("git commit -m 'new parent image'")
         os.system("git push --set-upstream origin parent-image-update")
     os.chdir(current_path)
 
