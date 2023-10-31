@@ -24,6 +24,7 @@ COMMON = [
     "workflow-engine",
     "chat-gateway",
     "paper-gateway",
+    "cognition-gateway",
 ]
 
 
@@ -34,6 +35,7 @@ EXEC_ENV = [
     "gates-runtime",
     "workflow-code-exec-env",
     "chat-exec-env",
+    "cognition-exec-env",
 ]
 
 TORCH_CPU = [
@@ -53,6 +55,7 @@ NEXT = [
     "admin-dashboard",
     "chat-ui",
     "paper-ui",
+    "cognition-ui",
 ]
 
 ALL_SERVICES = MINI + COMMON + EXEC_ENV + TORCH_CPU + TORCH_GPU
