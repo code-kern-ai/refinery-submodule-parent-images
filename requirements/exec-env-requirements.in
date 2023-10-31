@@ -25,3 +25,5 @@ holidays==0.21.13
 sumy==0.11.0
 knowledge==0.3
 tiktoken==0.4.0
+xgboost==2.0.1
+lightgbm==4.1.0

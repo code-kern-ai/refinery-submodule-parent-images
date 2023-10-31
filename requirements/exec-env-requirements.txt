@@ -101,6 +101,8 @@ lexmo==0.1.4
     # via -r exec-env-requirements.in
 libretranslatepy==2.1.1
     # via translate
+lightgbm==4.1.0
+    # via -r exec-env-requirements.in
 lxml==4.9.3
     # via
     #   breadability
@@ -130,6 +132,7 @@ numpy==1.23.4
     # via
     #   -r exec-env-requirements.in
     #   blis
+    #   lightgbm
     #   pandas
     #   scikit-learn
     #   scikit-optimize
@@ -137,6 +140,7 @@ numpy==1.23.4
     #   spacy
     #   textacy
     #   thinc
+    #   xgboost
 openai==0.27.7
     # via -r exec-env-requirements.in
 packaging==23.1
@@ -210,9 +214,11 @@ scikit-optimize==0.9.0
     # via -r exec-env-requirements.in
 scipy==1.11.2
     # via
+    #   lightgbm
     #   scikit-learn
     #   scikit-optimize
     #   textacy
+    #   xgboost
 six==1.16.0
     # via
     #   langdetect
@@ -273,7 +279,7 @@ typing-extensions==4.7.1
     #   sqlalchemy
 tzdata==2023.3
     # via pandas
-urllib3==2.0.6
+urllib3==2.0.7
     # via requests
 vadersentiment==3.3.2
     # via -r exec-env-requirements.in
@@ -281,6 +287,8 @@ wasabi==0.10.1
     # via
     #   spacy
     #   thinc
+xgboost==2.0.1
+    # via -r exec-env-requirements.in
 yarl==1.9.2
     # via aiohttp
 
