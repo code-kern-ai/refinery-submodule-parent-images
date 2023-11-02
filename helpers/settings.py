@@ -42,6 +42,7 @@ TORCH_CPU = [
     "refinery-embedder",
     "refinery-ml-exec-env",
     "refinery-zero-shot",
+    "hosted-inference-api",
 ]
 
 TORCH_GPU = [
