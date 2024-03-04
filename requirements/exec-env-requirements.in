@@ -25,3 +25,4 @@ holidays==0.21.13
 sumy==0.11.0
 knowledge==0.3
 tiktoken==0.4.0
+groq==0.4.2
