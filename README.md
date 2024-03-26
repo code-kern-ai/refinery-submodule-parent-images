@@ -28,9 +28,7 @@ It contains all requirements contained in the mini image and also the most commo
 - refinery-weak-supervisor
 - refinery-commercial-proxy
 - gates-gateway
-- workflow-engine
 - chat-gateway
-- paper-gateway
 
 ### exec-env
 
@@ -67,7 +65,5 @@ The next parent image is used for ui services based on NextJS and use Node 18.
 Services:
 
 - gates-ui
-- workflow-ui
 - admin-dashboard
 - chat-ui
-- paper-ui
