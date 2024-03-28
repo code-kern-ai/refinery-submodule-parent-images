@@ -21,9 +21,7 @@ COMMON = [
     "refinery-model-provider",
     "refinery-commercial-proxy",
     "gates-gateway",
-    "workflow-engine",
     "chat-gateway",
-    "paper-gateway",
     "cognition-gateway",
 ]
 
@@ -33,7 +31,6 @@ EXEC_ENV = [
     "refinery-lf-exec-env",
     "refinery-record-ide-env",
     "gates-runtime",
-    "workflow-code-exec-env",
     "chat-exec-env",
     "cognition-exec-env",
 ]
@@ -52,10 +49,8 @@ TORCH_GPU = [
 
 NEXT = [
     "gates-ui",
-    "workflow-ui",
     "admin-dashboard",
     "chat-ui",
-    "paper-ui",
     "cognition-ui",
 ]
 
