@@ -50,8 +50,9 @@ TORCH_GPU = [
 NEXT = [
     "gates-ui",
     "admin-dashboard",
-    "chat-ui",
+    # "chat-ui",
     "cognition-ui",
+    "refinery-ui",
 ]
 
 ALL_SERVICES = MINI + COMMON + EXEC_ENV + TORCH_CPU + TORCH_GPU
