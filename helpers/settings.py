@@ -21,7 +21,7 @@ COMMON = [
     "refinery-model-provider",
     "refinery-commercial-proxy",
     "gates-gateway",
-    "chat-gateway",
+    # "chat-gateway",
     "cognition-gateway",
 ]
 
@@ -31,7 +31,7 @@ EXEC_ENV = [
     "refinery-lf-exec-env",
     "refinery-record-ide-env",
     "gates-runtime",
-    "chat-exec-env",
+    # "chat-exec-env",
     "cognition-exec-env",
 ]
 
