@@ -76,6 +76,8 @@ fuzzywuzzy==0.18.0
     # via -r exec-env-requirements.in
 google-search-results==2.4.1
     # via -r exec-env-requirements.in
+greenlet==3.0.3
+    # via sqlalchemy
 groq==0.4.2
     # via -r exec-env-requirements.in
 h11==0.14.0
@@ -94,8 +96,6 @@ idna==3.7
     #   httpx
     #   requests
     #   yarl
-importlib-metadata==7.1.0
-    # via typeguard
 inflect==7.2.0
     # via quantulum3
 jellyfish==1.0.3
@@ -214,7 +214,7 @@ regex==2023.12.25
     # via
     #   nltk
     #   tiktoken
-requests==2.31.0
+requests==2.32.0
     # via
     #   -r exec-env-requirements.in
     #   google-search-results
@@ -254,7 +254,6 @@ soupsieve==2.5
 spacy[ja]==3.4.2
     # via
     #   -r exec-env-requirements.in
-    #   spacy
     #   textacy
 spacy-legacy==3.0.12
     # via spacy
@@ -325,8 +324,6 @@ wasabi==0.10.1
     #   thinc
 yarl==1.9.4
     # via aiohttp
-zipp==3.18.1
-    # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
