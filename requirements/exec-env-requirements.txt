@@ -216,7 +216,7 @@ regex==2024.5.15
     # via
     #   nltk
     #   tiktoken
-requests==2.32.0
+requests==2.32.3
     # via
     #   -r exec-env-requirements.in
     #   google-search-results
