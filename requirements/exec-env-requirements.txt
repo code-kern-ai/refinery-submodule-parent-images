@@ -216,7 +216,7 @@ regex==2024.5.15
     # via
     #   nltk
     #   tiktoken
-requests==2.32.3
+requests==2.31.0
     # via
     #   -r exec-env-requirements.in
     #   google-search-results
@@ -288,7 +288,7 @@ textblob==0.17.1
     # via -r exec-env-requirements.in
 textstat==0.7.3
     # via -r exec-env-requirements.in
-thinc==8.2.3
+thinc==8.2.4
     # via spacy
 threadpoolctl==3.5.0
     # via scikit-learn
@@ -335,7 +335,7 @@ wasabi==1.1.3
     #   weasel
 weasel==0.3.4
     # via spacy
-zipp==3.19.1
+zipp==3.19.2
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
