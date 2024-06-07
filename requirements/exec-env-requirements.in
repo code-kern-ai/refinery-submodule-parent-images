@@ -9,7 +9,8 @@ python-levenshtein==0.20.8
 quantulum3==0.7.11
 requests==2.31.0
 scikit-learn==1.1.2
-spacy[ja]==3.7.4
+jinja2==3.1.4
+spacy[ja]==3.4.2
 textblob==0.17.1
 textstat==0.7.3
 translate==3.6.1
