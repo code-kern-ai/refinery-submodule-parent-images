@@ -24,6 +24,8 @@ exceptiongroup==1.2.1
     # via anyio
 fastapi==0.110.3
     # via -r mini-requirements.in
+greenlet==3.0.3
+    # via sqlalchemy
 h11==0.14.0
     # via uvicorn
 idna==3.7
@@ -54,7 +56,7 @@ python-dateutil==2.9.0.post0
     #   pandas
 pytz==2024.1
     # via pandas
-requests==2.31.0
+requests==2.32.2
     # via -r mini-requirements.in
 s3transfer==0.6.2
     # via boto3
