@@ -24,6 +24,8 @@ exceptiongroup==1.2.1
     # via anyio
 fastapi==0.110.3
     # via -r mini-requirements.in
+greenlet==3.0.3
+    # via sqlalchemy
 h11==0.14.0
     # via uvicorn
 idna==3.7
@@ -72,7 +74,7 @@ typing-extensions==4.12.2
     #   fastapi
     #   pydantic
     #   starlette
-urllib3==1.26.18
+urllib3==1.26.19
     # via
     #   botocore
     #   minio
