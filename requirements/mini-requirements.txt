@@ -38,7 +38,7 @@ typing-extensions==4.12.2
     #   fastapi
     #   pydantic
     #   starlette
-urllib3==2.2.1
+urllib3==1.26.19
     # via requests
 uvicorn==0.22.0
     # via -r mini-requirements.in
