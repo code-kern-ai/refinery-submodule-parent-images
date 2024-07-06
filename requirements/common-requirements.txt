@@ -12,7 +12,7 @@ botocore==1.28.5
     # via
     #   boto3
     #   s3transfer
-certifi==2024.6.2
+certifi==2024.7.4
     # via
     #   minio
     #   requests
@@ -24,6 +24,8 @@ exceptiongroup==1.2.1
     # via anyio
 fastapi==0.110.3
     # via -r mini-requirements.in
+greenlet==3.0.3
+    # via sqlalchemy
 h11==0.14.0
     # via uvicorn
 idna==3.7
