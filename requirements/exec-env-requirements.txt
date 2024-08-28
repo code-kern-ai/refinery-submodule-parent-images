@@ -151,7 +151,7 @@ murmurhash==1.0.10
     #   thinc
 networkx==3.2.1
     # via textacy
-nltk==3.9
+nltk==3.9.1
     # via
     #   -r exec-env-requirements.in
     #   lexmo
