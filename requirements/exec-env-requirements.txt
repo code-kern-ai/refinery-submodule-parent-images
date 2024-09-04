@@ -34,7 +34,7 @@ catalogue==2.0.10
     #   srsly
     #   textacy
     #   thinc
-certifi==2024.7.4
+certifi==2024.8.30
     # via
     #   httpcore
     #   httpx
@@ -151,7 +151,7 @@ murmurhash==1.0.10
     #   thinc
 networkx==3.2.1
     # via textacy
-nltk==3.9.1
+nltk==3.8.1
     # via
     #   -r exec-env-requirements.in
     #   lexmo
@@ -237,7 +237,7 @@ requests==2.31.0
     #   tiktoken
     #   translate
     #   vadersentiment
-scikit-learn==1.5.0
+scikit-learn==1.1.2
     # via
     #   -r exec-env-requirements.in
     #   scikit-optimize
@@ -270,7 +270,7 @@ spacy-legacy==3.0.12
     # via spacy
 spacy-loggers==1.0.5
     # via spacy
-sqlalchemy==2.0.32
+sqlalchemy==2.0.33
     # via knowledge
 srsly==2.4.8
     # via
@@ -332,7 +332,7 @@ wasabi==0.10.1
     # via
     #   spacy
     #   thinc
-yarl==1.9.4
+yarl==1.9.8
     # via aiohttp
 zipp==3.20.1
     # via importlib-metadata
