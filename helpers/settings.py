@@ -7,9 +7,9 @@ import os
 MINI = [
     "refinery-authorizer",
     "refinery-config",
-    "refinery-doc-ock",
+    # "refinery-doc-ock",
     "refinery-gateway-proxy",
-    "platform-monitoring",
+    # "platform-monitoring",
 ]
 
 COMMON = [
@@ -19,8 +19,8 @@ COMMON = [
     "refinery-updater",
     "refinery-weak-supervisor",
     "refinery-model-provider",
-    "refinery-commercial-proxy",
-    "gates-gateway",
+    # "refinery-commercial-proxy",
+    # "gates-gateway",
     # "chat-gateway",
     "cognition-gateway",
 ]
@@ -30,7 +30,7 @@ EXEC_ENV = [
     "refinery-ac-exec-env",
     "refinery-lf-exec-env",
     "refinery-record-ide-env",
-    "gates-runtime",
+    # "gates-runtime",
     # "chat-exec-env",
     "cognition-exec-env",
 ]
@@ -38,17 +38,17 @@ EXEC_ENV = [
 TORCH_CPU = [
     "refinery-embedder",
     "refinery-ml-exec-env",
-    "refinery-zero-shot",
-    "hosted-inference-api",
+    # "refinery-zero-shot",
+    # "hosted-inference-api",
 ]
 
 TORCH_GPU = [
     "refinery-embedder",
-    "refinery-zero-shot",
+    # "refinery-zero-shot",
 ]
 
 NEXT = [
-    "gates-ui",
+    # "gates-ui",
     "admin-dashboard",
     # "chat-ui",
     "cognition-ui",
