@@ -6,7 +6,7 @@ import os
 
 MINI = [
     "refinery-authorizer",
-    "refinery-config",
+    # "refinery-config",
     # "refinery-doc-ock",
     "refinery-gateway-proxy",
     # "platform-monitoring",
