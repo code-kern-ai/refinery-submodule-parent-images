@@ -29,7 +29,7 @@ COMMON = [
 EXEC_ENV = [
     "refinery-ac-exec-env",
     "refinery-lf-exec-env",
-    "refinery-record-ide-env",
+    # "refinery-record-ide-env",
     # "gates-runtime",
     # "chat-exec-env",
     "cognition-exec-env",

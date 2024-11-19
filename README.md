@@ -33,7 +33,6 @@ Services:
 
 - refinery-ac-exec-env
 - refinery-lf-exec-env
-- refinery-record-ide-env
 
 ### torch-cpu
 
