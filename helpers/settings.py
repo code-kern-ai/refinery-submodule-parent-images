@@ -6,7 +6,7 @@ import os
 
 MINI = [
     "refinery-authorizer",
-    "refinery-config",
+    # "refinery-config",
     # "refinery-doc-ock",
     "refinery-gateway-proxy",
     # "platform-monitoring",
@@ -29,7 +29,7 @@ COMMON = [
 EXEC_ENV = [
     "refinery-ac-exec-env",
     "refinery-lf-exec-env",
-    "refinery-record-ide-env",
+    # "refinery-record-ide-env",
     # "gates-runtime",
     # "chat-exec-env",
     "cognition-exec-env",

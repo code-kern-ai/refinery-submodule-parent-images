@@ -10,10 +10,7 @@ It is designed for the smallest services, which are part of refinery and need on
 Services:
 
 - refinery-authorizer
-- refinery-config
-- refinery-doc-ock
 - refinery-gateway-proxy
-- platform-monitoring
 
 ### common
 
@@ -26,9 +23,6 @@ It contains all requirements contained in the mini image and also the most commo
 - refinery-tokenizer
 - refinery-updater
 - refinery-weak-supervisor
-- refinery-commercial-proxy
-- gates-gateway
-- chat-gateway
 
 ### exec-env
 
@@ -39,8 +33,6 @@ Services:
 
 - refinery-ac-exec-env
 - refinery-lf-exec-env
-- refinery-record-ide-env
-- chat-exec-env
 
 ### torch-cpu
 
@@ -50,7 +42,6 @@ Services:
 
 - refinery-embedder
 - refinery-ml-exec-env
-- refinery-zero-shot
 
 ### torch-cuda
 
@@ -64,6 +55,4 @@ The next parent image is used for ui services based on NextJS and use Node 18.
 
 Services:
 
-- gates-ui
 - admin-dashboard
-- chat-ui
