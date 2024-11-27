@@ -285,7 +285,7 @@ stemming==1.0.1
     # via -r exec-env-requirements.in
 sudachidict-core==20241021
     # via spacy
-sudachipy==0.6.9
+sudachipy==0.6.8
     # via
     #   spacy
     #   sudachidict-core
