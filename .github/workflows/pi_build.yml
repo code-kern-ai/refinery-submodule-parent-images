@@ -13,5 +13,5 @@ permissions:
 
 jobs: 
   call-pi-build:
-    uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_build.yml@parent-images
+    uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_build.yml@dev
     secrets: inherit
