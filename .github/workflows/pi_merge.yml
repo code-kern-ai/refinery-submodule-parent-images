@@ -1,0 +1,18 @@
+name: 'Parent Images: Parent Image Merge'
+
+on:
+  workflow_dispatch:
+
+  pull_request:
+    types: [closed]
+    
+permissions:
+  id-token: write
+  contents: write
+  actions: read
+
+jobs: 
+  call-pi-merge-parent-image:
+    uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_merge_parent_image.yml@dev
+    if: ${{ github.event.pull_request.merged }}
+    secrets: inherit
