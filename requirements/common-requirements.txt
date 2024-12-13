@@ -26,6 +26,8 @@ exceptiongroup==1.2.2
     # via anyio
 fastapi==0.115.2
     # via -r mini-requirements.in
+greenlet==3.1.1
+    # via sqlalchemy
 h11==0.14.0
     # via uvicorn
 idna==3.10
@@ -42,7 +44,7 @@ numpy==1.23.4
     # via
     #   -r common-requirements.in
     #   pandas
-pandas==1.5.1
+pandas==2.2.3
     # via -r common-requirements.in
 psycopg2-binary==2.9.9
     # via -r common-requirements.in
@@ -77,6 +79,8 @@ typing-extensions==4.12.2
     #   pydantic
     #   pydantic-core
     #   starlette
+tzdata==2024.2
+    # via pandas
 urllib3==1.26.20
     # via
     #   botocore
