@@ -4,7 +4,7 @@
 #
 #    pip-compile exec-env-requirements.in
 #
-aiohappyeyeballs==2.5.0
+aiohappyeyeballs==2.6.1
     # via aiohttp
 aiohttp==3.11.13
     # via openai
@@ -16,7 +16,7 @@ anyio==4.8.0
     #   httpx
 async-timeout==5.0.1
     # via aiohttp
-attrs==25.1.0
+attrs==25.2.0
     # via aiohttp
 beautifulsoup4==4.11.1
     # via -r exec-env-requirements.in
@@ -273,7 +273,7 @@ spacy-legacy==3.0.12
     # via spacy
 spacy-loggers==1.0.5
     # via spacy
-sqlalchemy==2.0.38
+sqlalchemy==2.0.39
     # via knowledge
 srsly==2.5.1
     # via
