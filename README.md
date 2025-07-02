@@ -56,3 +56,4 @@ The next parent image is used for ui services based on NextJS and use Node 18.
 Services:
 
 - admin-dashboard
+
