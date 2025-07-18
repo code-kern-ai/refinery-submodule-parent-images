@@ -51,3 +51,22 @@ jobs:
       - name: Delete Branch
         shell: bash
         run: git push origin --delete ${{ github.event.pull_request.head.ref }}
+  
+  gh-delete-app-branches:
+    name: 'GitHub: Delete App Branch'
+    needs: [pi-matrix, gh-delete-submodule-branches]
+    if: ${{ !failure() }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: ${{ fromJson(needs.pi-matrix.outputs.app) }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          repository: "${{ github.repository_owner }}/${{ matrix.app }}"
+          token: ${{ secrets.GH_TOKEN }}
+      
+      - name: Delete Branch
+        shell: bash
+        run: git push origin --delete ${{ github.event.pull_request.head.ref }}
