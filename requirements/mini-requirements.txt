@@ -8,13 +8,13 @@ annotated-types==0.7.0
     # via pydantic
 anyio==4.9.0
     # via starlette
-certifi==2025.6.15
+certifi==2025.7.14
     # via requests
 charset-normalizer==3.4.2
     # via requests
-click==8.1.8
+click==8.2.1
     # via uvicorn
-fastapi==0.115.2
+fastapi==0.116.1
     # via -r mini-requirements.in
 h11==0.16.0
     # via uvicorn
@@ -32,14 +32,15 @@ requests==2.32.4
     # via -r mini-requirements.in
 sniffio==1.3.1
     # via anyio
-starlette==0.40.0
+starlette==0.47.2
     # via fastapi
-typing-extensions==4.14.0
+typing-extensions==4.14.1
     # via
     #   anyio
     #   fastapi
     #   pydantic
     #   pydantic-core
+    #   starlette
 urllib3==2.5.0
     # via requests
 uvicorn==0.35.0
