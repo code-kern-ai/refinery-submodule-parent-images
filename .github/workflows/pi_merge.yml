@@ -16,57 +16,8 @@ jobs:
     uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_merge_submodule.yml@dev
     if: ${{ github.event.pull_request.merged }}
     secrets: inherit
-  
-  pi-matrix:
-    uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_matrix.yml@dev
-    if: ${{ !github.event.pull_request.merged && github.event.pull_request.head.ref == 'parent-image-updates' }}
-    secrets: inherit
-    with:
-      checkout_ref: parent-image-updates
-      repository: "${{ github.repository_owner }}/refinery-submodule-parent-images"
-  
-  call-dc-registry-delete:
-    name: 'Docker: Delete Branch Images'
-    needs: [pi-matrix]
-    uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/dc_registry_delete.yml@dev
-    secrets: inherit
-    strategy:
-      matrix:
-        parent_image_type: ${{ fromJson(needs.pi-matrix.outputs.parent_image_type) }}
-    with:
-      delete_tag: ${{ github.event.pull_request.head.ref }}-${{ matrix.parent_image_type }}
-      app_name: ${{ vars.PARENT_IMAGE_NAME}}
 
-  gh-delete-submodule-branches:
-    name: 'GitHub: Delete Submodule Branch'
-    needs: [call-dc-registry-delete]
-    if: ${{ !failure() }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-      
-      - name: Delete Branch
-        shell: bash
-        run: git push origin --delete ${{ github.event.pull_request.head.ref }}
-  
-  gh-delete-app-branches:
-    name: 'GitHub: Delete App Branch'
-    needs: [pi-matrix, gh-delete-submodule-branches]
-    if: ${{ !failure() }}
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        app: ${{ fromJson(needs.pi-matrix.outputs.app) }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          repository: "${{ github.repository_owner }}/${{ matrix.app }}"
-          token: ${{ secrets.GH_TOKEN }}
-      
-      - name: Delete Branch
-        shell: bash
-        run: git push origin --delete ${{ github.event.pull_request.head.ref }}
+  call-pi-cleanup-submodule:
+    uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_cleanup_submodule.yml@dev
+    if: ${{ !github.event.pull_request.merged }}
+    secrets: inherit
