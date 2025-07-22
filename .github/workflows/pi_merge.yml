@@ -17,10 +17,10 @@ permissions:
 jobs: 
   call-pi-merge-parent-image:
     uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_merge_submodule.yml@dev
-    if: ${{ github.event.pull_request.merged }}
+    if: ${{ github.event.pull_request.merged && github.event.pull_request.head.ref == 'parent-image-updates' }}
     secrets: inherit
 
   call-pi-cleanup-submodule:
     uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_cleanup_submodule.yml@dev
-    if: ${{ !github.event.pull_request.merged }}
+    if: ${{ !github.event.pull_request.merged && github.event.pull_request.head.ref == 'parent-image-updates' }}
     secrets: inherit

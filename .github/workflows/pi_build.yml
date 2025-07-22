@@ -5,9 +5,6 @@ on:
 
   pull_request:
     types: [opened, synchronize, reopened]
-    branches:
-      - dev
-      - parent-image-updates
     
 permissions:
   id-token: write
@@ -17,4 +14,5 @@ permissions:
 jobs: 
   call-pi-build:
     uses: code-kern-ai/cicd-deployment-scripts/.github/workflows/pi_build.yml@dev
+    if: github.event.pull_request.head.ref == 'parent-image-updates'
     secrets: inherit
