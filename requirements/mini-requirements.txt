@@ -22,11 +22,11 @@ idna==3.10
     # via
     #   anyio
     #   requests
-pydantic==2.7.4
+pydantic==2.11.7
     # via
     #   -r mini-requirements.in
     #   fastapi
-pydantic-core==2.18.4
+pydantic-core==2.33.2
     # via pydantic
 requests==2.32.4
     # via -r mini-requirements.in
@@ -41,6 +41,9 @@ typing-extensions==4.14.1
     #   pydantic
     #   pydantic-core
     #   starlette
+    #   typing-inspection
+typing-inspection==0.4.1
+    # via pydantic
 urllib3==2.5.0
     # via requests
 uvicorn==0.35.0
