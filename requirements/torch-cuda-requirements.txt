@@ -17,7 +17,7 @@ argon2-cffi-bindings==21.2.0
 asgiref==3.9.2
     # via opentelemetry-instrumentation-asgi
 boto3==1.39.6
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 botocore==1.39.10
     # via
     #   boto3
@@ -33,7 +33,7 @@ charset-normalizer==3.4.2
 click==8.2.1
     # via uvicorn
 fastapi==0.116.1
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/mini-requirements.in
+    # via -r mini-requirements.in
 filelock==3.18.0
     # via
     #   huggingface-hub
@@ -74,14 +74,14 @@ joblib==1.5.1
 markupsafe==3.0.2
     # via jinja2
 minio==7.2.15
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 mpmath==1.3.0
     # via sympy
 networkx==3.5
     # via torch
 numpy==1.26.2
     # via
-    #   -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    #   -r common-requirements.in
     #   pandas
     #   scikit-learn
     #   scikit-optimize
@@ -89,7 +89,7 @@ numpy==1.26.2
     #   transformers
 opentelemetry-api==1.37.0
     # via
-    #   -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    #   -r common-requirements.in
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-instrumentation
     #   opentelemetry-instrumentation-asgi
@@ -100,26 +100,26 @@ opentelemetry-api==1.37.0
 opentelemetry-exporter-otlp-proto-common==1.37.0
     # via opentelemetry-exporter-otlp-proto-grpc
 opentelemetry-exporter-otlp-proto-grpc==1.37.0
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 opentelemetry-instrumentation==0.58b0
     # via
-    #   -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    #   -r common-requirements.in
     #   opentelemetry-instrumentation-asgi
     #   opentelemetry-instrumentation-fastapi
     #   opentelemetry-instrumentation-logging
 opentelemetry-instrumentation-asgi==0.58b0
     # via opentelemetry-instrumentation-fastapi
 opentelemetry-instrumentation-fastapi==0.58b0
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 opentelemetry-instrumentation-logging==0.58b0
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 opentelemetry-proto==1.37.0
     # via
     #   opentelemetry-exporter-otlp-proto-common
     #   opentelemetry-exporter-otlp-proto-grpc
 opentelemetry-sdk==1.37.0
     # via
-    #   -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    #   -r common-requirements.in
     #   opentelemetry-exporter-otlp-proto-grpc
 opentelemetry-semantic-conventions==0.58b0
     # via
@@ -137,15 +137,15 @@ packaging==25.0
     #   opentelemetry-instrumentation
     #   transformers
 pandas==1.5.1
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 prometheus-client==0.23.1
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 protobuf==6.32.1
     # via
     #   googleapis-common-protos
     #   opentelemetry-proto
 psycopg2-binary==2.9.9
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 pyaml==25.7.0
     # via scikit-optimize
 pycparser==2.22
@@ -154,7 +154,7 @@ pycryptodome==3.23.0
     # via minio
 pydantic==2.7.4
     # via
-    #   -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/mini-requirements.in
+    #   -r mini-requirements.in
     #   fastapi
 pydantic-core==2.18.4
     # via pydantic
@@ -173,7 +173,7 @@ regex==2024.11.6
     # via transformers
 requests==2.32.4
     # via
-    #   -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/mini-requirements.in
+    #   -r mini-requirements.in
     #   huggingface-hub
     #   transformers
 s3transfer==0.13.1
@@ -195,7 +195,7 @@ six==1.17.0
 sniffio==1.3.1
     # via anyio
 sqlalchemy==1.4.42
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/common-requirements.in
+    # via -r common-requirements.in
 starlette==0.47.2
     # via fastapi
 sympy==1.14.0
@@ -233,7 +233,7 @@ urllib3==2.5.0
     #   minio
     #   requests
 uvicorn==0.35.0
-    # via -r /Users/andhrelja/Projects/refinery-torch-cpu-parent-image/submodules/parent-images/requirements/mini-requirements.in
+    # via -r mini-requirements.in
 wrapt==1.17.3
     # via opentelemetry-instrumentation
 zipp==3.23.0
