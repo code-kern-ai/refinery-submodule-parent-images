@@ -4,21 +4,23 @@
 #
 #    pip-compile mini-requirements.in
 #
+annotated-doc==0.0.4
+    # via fastapi
 annotated-types==0.7.0
     # via pydantic
-anyio==4.9.0
+anyio==4.11.0
     # via starlette
-certifi==2025.7.14
+certifi==2025.11.12
     # via requests
-charset-normalizer==3.4.2
+charset-normalizer==3.4.4
     # via requests
-click==8.2.1
+click==8.3.1
     # via uvicorn
-fastapi==0.116.1
+fastapi==0.120.1
     # via -r mini-requirements.in
 h11==0.16.0
     # via uvicorn
-idna==3.10
+idna==3.11
     # via
     #   anyio
     #   requests
@@ -32,9 +34,9 @@ requests==2.32.4
     # via -r mini-requirements.in
 sniffio==1.3.1
     # via anyio
-starlette==0.47.2
+starlette==0.49.3
     # via fastapi
-typing-extensions==4.14.1
+typing-extensions==4.15.0
     # via
     #   anyio
     #   fastapi
