@@ -85,6 +85,8 @@ fuzzywuzzy==0.18.0
     # via -r exec-env-requirements.in
 google-search-results==2.4.1
     # via -r exec-env-requirements.in
+greenlet==3.3.0
+    # via sqlalchemy
 groq==0.4.2
     # via -r exec-env-requirements.in
 h11==0.16.0
@@ -349,7 +351,7 @@ typing-extensions==4.15.0
     #   typer-slim
 tzdata==2025.2
     # via pandas
-urllib3==2.5.0
+urllib3==2.6.0
     # via requests
 vadersentiment==3.3.2
     # via -r exec-env-requirements.in
