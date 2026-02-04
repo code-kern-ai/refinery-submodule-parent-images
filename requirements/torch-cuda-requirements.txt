@@ -145,6 +145,7 @@ prometheus-client==0.23.1
     # via -r common-requirements.in
 protobuf==6.33.5
     # via
+    #   -r common-requirements.in
     #   googleapis-common-protos
     #   opentelemetry-proto
 psycopg2-binary==2.9.9
