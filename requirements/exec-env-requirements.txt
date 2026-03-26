@@ -85,6 +85,8 @@ fuzzywuzzy==0.18.0
     # via -r exec-env-requirements.in
 google-search-results==2.4.1
     # via -r exec-env-requirements.in
+greenlet==3.3.2
+    # via sqlalchemy
 groq==0.4.2
     # via -r exec-env-requirements.in
 h11==0.16.0
@@ -237,7 +239,7 @@ regex==2026.1.15
     # via
     #   nltk
     #   tiktoken
-requests==2.32.5
+requests==2.33.0
     # via
     #   -r exec-env-requirements.in
     #   google-search-results
