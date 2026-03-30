@@ -85,6 +85,8 @@ fuzzywuzzy==0.18.0
     # via -r exec-env-requirements.in
 google-search-results==2.4.1
     # via -r exec-env-requirements.in
+greenlet==3.3.2
+    # via sqlalchemy
 groq==0.4.2
     # via -r exec-env-requirements.in
 h11==0.16.0
@@ -209,7 +211,7 @@ pydantic==2.7.4
     #   weasel
 pydantic-core==2.18.4
     # via pydantic
-pygments==2.19.2
+pygments==2.20.0
     # via rich
 pymeeus==0.5.12
     # via
