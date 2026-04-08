@@ -2,6 +2,6 @@
 -r common-requirements.in
 filelock==3.20.3
 torch==2.8.0
-transformers==4.53.2
+transformers==5.5.0
 scikit-optimize==0.9.0
 scikit-learn==1.5.2
