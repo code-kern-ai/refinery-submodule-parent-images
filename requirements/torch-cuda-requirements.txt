@@ -7,11 +7,15 @@
 --extra-index-url https://download.pytorch.org/whl/cu113
 
 annotated-doc==0.0.4
-    # via fastapi
+    # via
+    #   fastapi
+    #   typer
 annotated-types==0.7.0
     # via pydantic
 anyio==4.12.1
-    # via starlette
+    # via
+    #   httpx
+    #   starlette
 argon2-cffi==25.1.0
     # via minio
 argon2-cffi-bindings==25.1.0
@@ -26,6 +30,8 @@ botocore==1.39.17
     #   s3transfer
 certifi==2026.1.4
     # via
+    #   httpcore
+    #   httpx
     #   minio
     #   requests
 cffi==2.0.0
@@ -33,7 +39,9 @@ cffi==2.0.0
 charset-normalizer==3.4.4
     # via requests
 click==8.3.1
-    # via uvicorn
+    # via
+    #   typer
+    #   uvicorn
 fastapi==0.120.1
     # via -r mini-requirements.in
 filelock==3.20.3
@@ -48,19 +56,28 @@ fsspec==2026.1.0
     #   torch
 googleapis-common-protos==1.72.0
     # via opentelemetry-exporter-otlp-proto-grpc
+greenlet==3.3.2
+    # via sqlalchemy
 grpcio==1.76.0
     # via opentelemetry-exporter-otlp-proto-grpc
 h11==0.16.0
-    # via uvicorn
+    # via
+    #   httpcore
+    #   uvicorn
 hf-xet==1.2.0
     # via huggingface-hub
-huggingface-hub==0.36.1
+httpcore==1.0.9
+    # via httpx
+httpx==0.28.1
+    # via huggingface-hub
+huggingface-hub==1.5.0
     # via
     #   tokenizers
     #   transformers
 idna==3.11
     # via
     #   anyio
+    #   httpx
     #   requests
 importlib-metadata==8.7.1
     # via opentelemetry-api
@@ -74,8 +91,12 @@ joblib==1.5.3
     # via
     #   scikit-learn
     #   scikit-optimize
+markdown-it-py==4.0.0
+    # via rich
 markupsafe==3.0.3
     # via jinja2
+mdurl==0.1.2
+    # via markdown-it-py
 minio==7.2.15
     # via -r common-requirements.in
 mpmath==1.3.0
@@ -90,6 +111,43 @@ numpy==1.26.2
     #   scikit-optimize
     #   scipy
     #   transformers
+nvidia-cublas-cu12==12.8.4.1
+    # via
+    #   nvidia-cudnn-cu12
+    #   nvidia-cusolver-cu12
+    #   torch
+nvidia-cuda-cupti-cu12==12.8.90
+    # via torch
+nvidia-cuda-nvrtc-cu12==12.8.93
+    # via torch
+nvidia-cuda-runtime-cu12==12.8.90
+    # via torch
+nvidia-cudnn-cu12==9.10.2.21
+    # via torch
+nvidia-cufft-cu12==11.3.3.83
+    # via torch
+nvidia-cufile-cu12==1.13.1.3
+    # via torch
+nvidia-curand-cu12==10.3.9.90
+    # via torch
+nvidia-cusolver-cu12==11.7.3.90
+    # via torch
+nvidia-cusparse-cu12==12.5.8.93
+    # via
+    #   nvidia-cusolver-cu12
+    #   torch
+nvidia-cusparselt-cu12==0.7.1
+    # via torch
+nvidia-nccl-cu12==2.27.3
+    # via torch
+nvidia-nvjitlink-cu12==12.8.93
+    # via
+    #   nvidia-cufft-cu12
+    #   nvidia-cusolver-cu12
+    #   nvidia-cusparse-cu12
+    #   torch
+nvidia-nvtx-cu12==12.8.90
+    # via torch
 opentelemetry-api==1.39.1
     # via
     #   -r common-requirements.in
@@ -162,6 +220,8 @@ pydantic==2.7.4
     #   fastapi
 pydantic-core==2.18.4
     # via pydantic
+pygments==2.20.0
+    # via rich
 python-dateutil==2.9.0.post0
     # via
     #   botocore
@@ -178,8 +238,9 @@ regex==2026.1.15
 requests==2.32.5
     # via
     #   -r mini-requirements.in
-    #   huggingface-hub
     #   transformers
+rich==14.3.3
+    # via typer
 s3transfer==0.13.1
     # via boto3
 safetensors==0.7.0
@@ -194,6 +255,8 @@ scipy==1.16.3
     # via
     #   scikit-learn
     #   scikit-optimize
+shellingham==1.5.4
+    # via typer
 six==1.17.0
     # via python-dateutil
 sqlalchemy==1.4.42
@@ -204,7 +267,7 @@ sympy==1.14.0
     # via torch
 threadpoolctl==3.6.0
     # via scikit-learn
-tokenizers==0.21.4
+tokenizers==0.22.2
     # via transformers
 torch==2.8.0
     # via -r torch-cuda-requirements.in
@@ -212,8 +275,16 @@ tqdm==4.67.3
     # via
     #   huggingface-hub
     #   transformers
-transformers==4.53.2
+transformers==5.0.0rc3
     # via -r torch-cuda-requirements.in
+triton==3.4.0
+    # via torch
+typer==0.24.1
+    # via
+    #   huggingface-hub
+    #   typer-slim
+typer-slim==0.24.0
+    # via transformers
 typing-extensions==4.15.0
     # via
     #   anyio
