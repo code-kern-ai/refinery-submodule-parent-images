@@ -6,29 +6,31 @@
 #
 aiohappyeyeballs==2.6.1
     # via aiohttp
-aiohttp==3.13.3
+aiohttp==3.13.5
     # via
     #   -r exec-env-requirements.in
     #   openai
 aiosignal==1.4.0
     # via aiohttp
+annotated-doc==0.0.4
+    # via typer
 annotated-types==0.7.0
     # via pydantic
-anyio==4.12.1
+anyio==4.13.0
     # via
     #   groq
     #   httpx
-attrs==25.4.0
+attrs==26.1.0
     # via aiohttp
 beautifulsoup4==4.11.1
     # via -r exec-env-requirements.in
 better-profanity==0.7.0
     # via -r exec-env-requirements.in
-blis==0.7.11
+blis==1.3.3
     # via thinc
 breadability==0.1.20
     # via sumy
-cachetools==7.0.0
+cachetools==7.0.5
     # via textacy
 catalogue==2.0.10
     # via
@@ -36,28 +38,28 @@ catalogue==2.0.10
     #   srsly
     #   textacy
     #   thinc
-certifi==2026.1.4
+certifi==2026.2.25
     # via
     #   httpcore
     #   httpx
     #   requests
-chardet==5.2.0
+chardet==7.4.0.post2
     # via breadability
-charset-normalizer==3.4.4
+charset-normalizer==3.4.7
     # via requests
-click==8.3.1
+click==8.3.2
     # via
     #   nltk
     #   translate
     #   typer
-    #   typer-slim
 cloudpathlib==0.23.0
     # via weasel
-confection==0.1.5
+confection==1.3.3
     # via
+    #   spacy
     #   thinc
     #   weasel
-convertdate==2.4.0
+convertdate==2.4.1
     # via holidays
 cymem==2.0.13
     # via
@@ -98,7 +100,9 @@ holidays==0.21.13
 httpcore==1.0.9
     # via httpx
 httpx==0.28.1
-    # via groq
+    # via
+    #   groq
+    #   weasel
 idna==3.11
     # via
     #   anyio
@@ -123,8 +127,6 @@ knowledge==0.3
     # via -r exec-env-requirements.in
 korean-lunar-calendar==0.3.1
     # via holidays
-langcodes==3.5.1
-    # via spacy
 langdetect==1.0.9
     # via -r exec-env-requirements.in
 levenshtein==0.20.8
@@ -143,7 +145,7 @@ markupsafe==3.0.3
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==10.8.0
+more-itertools==11.0.1
     # via inflect
 multidict==6.7.1
     # via
@@ -156,7 +158,7 @@ murmurhash==1.0.15
     #   thinc
 networkx==3.6.1
     # via textacy
-nltk==3.9.3
+nltk==3.9.4
     # via
     #   -r exec-env-requirements.in
     #   lexmo
@@ -187,7 +189,7 @@ pandas==2.3.3
     # via lexmo
 phonenumbers==8.13.0
     # via -r exec-env-requirements.in
-preshed==3.0.12
+preshed==3.0.13
     # via
     #   spacy
     #   thinc
@@ -195,21 +197,20 @@ propcache==0.4.1
     # via
     #   aiohttp
     #   yarl
-pyaml==25.7.0
+pyaml==26.2.1
     # via scikit-optimize
-pycountry==24.6.1
+pycountry==26.2.16
     # via sumy
-pydantic==2.7.4
+pydantic==2.12.5
     # via
     #   -r exec-env-requirements.in
-    #   confection
     #   groq
     #   spacy
     #   thinc
     #   weasel
-pydantic-core==2.18.4
+pydantic-core==2.41.5
     # via pydantic
-pygments==2.19.2
+pygments==2.20.0
     # via rich
 pymeeus==0.5.12
     # via
@@ -225,7 +226,7 @@ python-dateutil==2.9.0.post0
     #   pandas
 python-levenshtein==0.20.8
     # via -r exec-env-requirements.in
-pytz==2025.2
+pytz==2026.1.post1
     # via pandas
 pyyaml==6.0.3
     # via pyaml
@@ -233,11 +234,11 @@ quantulum3==0.7.11
     # via -r exec-env-requirements.in
 rapidfuzz==2.15.2
     # via levenshtein
-regex==2026.1.15
+regex==2026.4.4
     # via
     #   nltk
     #   tiktoken
-requests==2.32.5
+requests==2.33.0
     # via
     #   -r exec-env-requirements.in
     #   google-search-results
@@ -249,8 +250,7 @@ requests==2.32.5
     #   tiktoken
     #   translate
     #   vadersentiment
-    #   weasel
-rich==14.3.2
+rich==14.3.3
     # via typer
 scikit-learn==1.5.0
     # via
@@ -270,13 +270,13 @@ six==1.17.0
     # via
     #   langdetect
     #   python-dateutil
-smart-open==7.5.0
+smart-open==7.5.1
     # via weasel
 sniffio==1.3.1
     # via groq
 soupsieve==2.8.3
     # via beautifulsoup4
-spacy[ja]==3.7.5
+spacy[ja]==3.8.14
     # via
     #   -r exec-env-requirements.in
     #   textacy
@@ -284,11 +284,10 @@ spacy-legacy==3.0.12
     # via spacy
 spacy-loggers==1.0.5
     # via spacy
-sqlalchemy==2.0.46
+sqlalchemy==2.0.49
     # via knowledge
-srsly==2.5.2
+srsly==2.5.3
     # via
-    #   confection
     #   spacy
     #   thinc
     #   weasel
@@ -308,7 +307,7 @@ textblob==0.17.1
     # via -r exec-env-requirements.in
 textstat==0.7.3
     # via -r exec-env-requirements.in
-thinc==8.2.5
+thinc==8.3.13
     # via spacy
 threadpoolctl==3.6.0
     # via scikit-learn
@@ -324,12 +323,12 @@ tqdm==4.67.3
     #   textacy
 translate==3.6.1
     # via -r exec-env-requirements.in
-typeguard==4.4.4
+typeguard==4.5.1
     # via inflect
-typer==0.21.1
-    # via spacy
-typer-slim==0.21.1
-    # via weasel
+typer==0.24.1
+    # via
+    #   spacy
+    #   weasel
 typing-extensions==4.15.0
     # via
     #   aiosignal
@@ -339,9 +338,10 @@ typing-extensions==4.15.0
     #   pydantic-core
     #   sqlalchemy
     #   typeguard
-    #   typer
-    #   typer-slim
-tzdata==2025.3
+    #   typing-inspection
+typing-inspection==0.4.2
+    # via pydantic
+tzdata==2026.1
     # via pandas
 urllib3==2.6.3
     # via requests
@@ -352,11 +352,11 @@ wasabi==1.1.3
     #   spacy
     #   thinc
     #   weasel
-weasel==0.4.3
+weasel==1.0.0
     # via spacy
-wrapt==2.1.1
+wrapt==2.1.2
     # via smart-open
-yarl==1.22.0
+yarl==1.23.0
     # via aiohttp
 
 # The following packages are considered to be unsafe in a requirements file:

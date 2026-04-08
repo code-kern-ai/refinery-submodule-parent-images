@@ -8,13 +8,13 @@ annotated-doc==0.0.4
     # via fastapi
 annotated-types==0.7.0
     # via pydantic
-anyio==4.12.1
+anyio==4.13.0
     # via starlette
-certifi==2026.1.4
+certifi==2026.2.25
     # via requests
-charset-normalizer==3.4.4
+charset-normalizer==3.4.7
     # via requests
-click==8.3.1
+click==8.3.2
     # via uvicorn
 fastapi==0.120.1
     # via -r mini-requirements.in
@@ -24,13 +24,13 @@ idna==3.11
     # via
     #   anyio
     #   requests
-pydantic==2.7.4
+pydantic==2.12.5
     # via
     #   -r mini-requirements.in
     #   fastapi
-pydantic-core==2.18.4
+pydantic-core==2.41.5
     # via pydantic
-requests==2.32.5
+requests==2.33.0
     # via -r mini-requirements.in
 starlette==0.49.3
     # via fastapi
@@ -41,6 +41,9 @@ typing-extensions==4.15.0
     #   pydantic
     #   pydantic-core
     #   starlette
+    #   typing-inspection
+typing-inspection==0.4.2
+    # via pydantic
 urllib3==2.6.3
     # via requests
 uvicorn==0.35.0
