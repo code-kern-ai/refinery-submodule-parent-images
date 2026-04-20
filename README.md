@@ -21,7 +21,6 @@ It contains all requirements contained in the mini image and also the most commo
 - refinery-model-provider
 - refinery-neural-search
 - refinery-tokenizer
-- refinery-updater
 - refinery-weak-supervisor
 
 ### exec-env

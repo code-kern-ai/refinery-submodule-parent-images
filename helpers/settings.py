@@ -16,7 +16,7 @@ COMMON = [
     "refinery-gateway",
     "refinery-neural-search",
     "refinery-tokenizer",
-    "refinery-updater",
+    # "refinery-updater",
     "refinery-weak-supervisor",
     "refinery-model-provider",
     # "refinery-commercial-proxy",
