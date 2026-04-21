@@ -87,6 +87,8 @@ fuzzywuzzy==0.18.0
     # via -r exec-env-requirements.in
 google-search-results==2.4.1
     # via -r exec-env-requirements.in
+greenlet==3.4.0
+    # via sqlalchemy
 groq==0.4.2
     # via -r exec-env-requirements.in
 h11==0.16.0
@@ -135,7 +137,7 @@ lexmo==0.1.4
     # via -r exec-env-requirements.in
 libretranslatepy==2.1.1
     # via translate
-lxml==6.0.2
+lxml==6.1.0
     # via
     #   breadability
     #   translate
