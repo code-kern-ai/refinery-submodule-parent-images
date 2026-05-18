@@ -30,7 +30,7 @@ blis==1.3.3
     # via thinc
 breadability==0.1.20
     # via sumy
-cachetools==7.0.5
+cachetools==7.1.2
     # via textacy
 catalogue==2.0.10
     # via
@@ -38,21 +38,21 @@ catalogue==2.0.10
     #   srsly
     #   textacy
     #   thinc
-certifi==2026.2.25
+certifi==2026.4.22
     # via
     #   httpcore
     #   httpx
     #   requests
-chardet==7.4.0.post2
+chardet==7.4.3
     # via breadability
 charset-normalizer==3.4.7
     # via requests
-click==8.3.2
+click==8.4.0
     # via
     #   nltk
     #   translate
     #   typer
-cloudpathlib==0.23.0
+cloudpathlib==0.24.0
     # via weasel
 confection==1.3.3
     # via
@@ -103,7 +103,7 @@ httpx==0.28.1
     # via
     #   groq
     #   weasel
-idna==3.11
+idna==3.15
     # via
     #   anyio
     #   httpx
@@ -135,17 +135,17 @@ lexmo==0.1.4
     # via -r exec-env-requirements.in
 libretranslatepy==2.1.1
     # via translate
-lxml==6.0.2
+lxml==6.1.0
     # via
     #   breadability
     #   translate
-markdown-it-py==4.0.0
+markdown-it-py==4.2.0
     # via rich
 markupsafe==3.0.3
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==11.0.1
+more-itertools==11.0.2
     # via inflect
 multidict==6.7.1
     # via
@@ -180,7 +180,7 @@ numpy==1.23.4
     #   thinc
 openai==0.27.7
     # via -r exec-env-requirements.in
-packaging==26.0
+packaging==26.2
     # via
     #   spacy
     #   thinc
@@ -193,7 +193,7 @@ preshed==3.0.13
     # via
     #   spacy
     #   thinc
-propcache==0.4.1
+propcache==0.5.2
     # via
     #   aiohttp
     #   yarl
@@ -226,7 +226,7 @@ python-dateutil==2.9.0.post0
     #   pandas
 python-levenshtein==0.20.8
     # via -r exec-env-requirements.in
-pytz==2026.1.post1
+pytz==2026.2
     # via pandas
 pyyaml==6.0.3
     # via pyaml
@@ -234,11 +234,11 @@ quantulum3==0.7.11
     # via -r exec-env-requirements.in
 rapidfuzz==2.15.2
     # via levenshtein
-regex==2026.4.4
+regex==2026.5.9
     # via
     #   nltk
     #   tiktoken
-requests==2.33.0
+requests==2.34.2
     # via
     #   -r exec-env-requirements.in
     #   google-search-results
@@ -250,7 +250,7 @@ requests==2.33.0
     #   tiktoken
     #   translate
     #   vadersentiment
-rich==14.3.3
+rich==15.0.0
     # via typer
 scikit-learn==1.5.0
     # via
@@ -270,7 +270,7 @@ six==1.17.0
     # via
     #   langdetect
     #   python-dateutil
-smart-open==7.5.1
+smart-open==7.6.1
     # via weasel
 sniffio==1.3.1
     # via groq
@@ -293,9 +293,9 @@ srsly==2.5.3
     #   weasel
 stemming==1.0.1
     # via -r exec-env-requirements.in
-sudachidict-core==20260116
+sudachidict-core==20260428
     # via spacy
-sudachipy==0.6.10
+sudachipy==0.6.11
     # via
     #   spacy
     #   sudachidict-core
@@ -323,9 +323,9 @@ tqdm==4.67.3
     #   textacy
 translate==3.6.1
     # via -r exec-env-requirements.in
-typeguard==4.5.1
+typeguard==4.5.2
     # via inflect
-typer==0.24.1
+typer==0.25.1
     # via
     #   spacy
     #   weasel
@@ -341,9 +341,9 @@ typing-extensions==4.15.0
     #   typing-inspection
 typing-inspection==0.4.2
     # via pydantic
-tzdata==2026.1
+tzdata==2026.2
     # via pandas
-urllib3==2.6.3
+urllib3==2.7.0
     # via requests
 vadersentiment==3.3.2
     # via -r exec-env-requirements.in
