@@ -17,7 +17,7 @@ phonenumbers==8.13.0
 pydantic==2.12.5
 python-levenshtein==0.20.8
 quantulum3==0.7.11
-requests==2.33.0
+requests==2.34.2
 scikit-learn==1.5.0
 spacy[ja]==3.8.14
 stemming==1.0.1
