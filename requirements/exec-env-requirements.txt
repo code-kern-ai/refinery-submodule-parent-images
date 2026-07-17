@@ -67,6 +67,8 @@ cymem==2.0.13
     #   thinc
 cytoolz==1.1.0
     # via textacy
+defusedxml==0.7.1
+    # via nltk
 distro==1.9.0
     # via groq
 docopt==0.6.2
@@ -86,6 +88,8 @@ fuzzywuzzy==0.18.0
     # via -r exec-env-requirements.in
 google-search-results==2.4.1
     # via -r exec-env-requirements.in
+greenlet==3.5.3
+    # via sqlalchemy
 groq==0.4.2
     # via -r exec-env-requirements.in
 h11==0.16.0
@@ -157,7 +161,7 @@ murmurhash==1.0.15
     #   thinc
 networkx==3.6.1
     # via textacy
-nltk==3.9.4
+nltk==3.10.0
     # via
     #   -r exec-env-requirements.in
     #   lexmo
