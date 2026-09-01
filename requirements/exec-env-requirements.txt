@@ -88,6 +88,8 @@ fuzzywuzzy==0.18.0
     # via -r exec-env-requirements.in
 google-search-results==2.4.1
     # via -r exec-env-requirements.in
+greenlet==3.5.5
+    # via sqlalchemy
 groq==0.4.2
     # via -r exec-env-requirements.in
 h11==0.16.0
@@ -159,7 +161,7 @@ murmurhash==1.0.15
     #   thinc
 networkx==3.6.1
     # via textacy
-nltk==3.10.0
+nltk==3.10.3
     # via
     #   -r exec-env-requirements.in
     #   lexmo
