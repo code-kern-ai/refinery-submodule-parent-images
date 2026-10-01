@@ -16,7 +16,7 @@ charset-normalizer==3.5.2
     # via requests
 click==8.5.0
     # via uvicorn
-fastapi==0.142.2
+fastapi==0.136.3
     # via -r mini-requirements.in
 h11==0.16.0
     # via uvicorn
@@ -24,8 +24,6 @@ idna==3.20
     # via
     #   anyio
     #   requests
-opentelemetry-api==1.45.0
-    # via fastapi
 pydantic==2.13.5
     # via
     #   -r mini-requirements.in
@@ -40,7 +38,6 @@ typing-extensions==4.16.0
     # via
     #   anyio
     #   fastapi
-    #   opentelemetry-api
     #   pydantic
     #   pydantic-core
     #   starlette
