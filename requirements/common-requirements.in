@@ -1,14 +1,14 @@
 -r mini-requirements.in
 boto3==1.39.6
-minio==7.2.15
-numpy==1.26.2
-opentelemetry-api==1.45.0
-opentelemetry-sdk==1.45.0
-opentelemetry-exporter-otlp-proto-grpc==1.45.0
-opentelemetry-instrumentation==0.66b0
-opentelemetry-instrumentation-fastapi==0.66b0
-opentelemetry-instrumentation-logging==0.66b0
-pandas==1.5.1
+minio==7.2.20
+numpy==1.26.4
+opentelemetry-api==1.45.1
+opentelemetry-sdk==1.45.1
+opentelemetry-exporter-otlp-proto-grpc==1.45.1
+opentelemetry-instrumentation==0.66b1
+opentelemetry-instrumentation-fastapi==0.66b1
+opentelemetry-instrumentation-logging==0.66b1
+pandas==1.5.3
 prometheus-client==0.26.0
-psycopg2-binary==2.9.9
-SQLAlchemy==1.4.42
+psycopg2-binary==2.9.13
+SQLAlchemy==1.4.52

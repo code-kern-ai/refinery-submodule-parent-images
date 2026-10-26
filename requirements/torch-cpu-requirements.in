@@ -1,7 +1,7 @@
 --extra-index-url https://download.pytorch.org/whl/cpu 
 -r common-requirements.in
-filelock==4.0.7
-torch==2.14.0
-transformers==5.17.0
+filelock==4.2.4
+torch==2.14.1
+transformers==5.20.2
 scikit-optimize==0.10.2
 scikit-learn==1.9.1
