@@ -46,7 +46,7 @@ cloudpickle==3.1.2
     # via joblib
 fastapi==0.136.3
     # via -r mini-requirements.in
-filelock==4.0.7
+filelock==4.2.1
     # via
     #   -r torch-cpu-requirements.in
     #   huggingface-hub
@@ -57,6 +57,8 @@ fsspec==2026.9.0
     #   torch
 googleapis-common-protos==1.75.5
     # via opentelemetry-exporter-otlp-proto-grpc
+greenlet==3.5.6
+    # via sqlalchemy
 grpcio==1.84.0
     # via opentelemetry-exporter-otlp-proto-grpc
 h11==0.16.0
@@ -233,7 +235,7 @@ threadpoolctl==3.7.0
     # via scikit-learn
 tokenizers==0.23.2
     # via transformers
-torch==2.14.0
+torch==2.14.0+cpu
     # via -r torch-cpu-requirements.in
 tqdm==4.70.1
     # via
