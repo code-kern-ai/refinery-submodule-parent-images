@@ -18,7 +18,7 @@ pydantic==2.14.1
 python-levenshtein==0.27.5
 quantulum3==0.10.0
 requests==2.34.2
-scikit-learn==1.9.1
+scikit-learn==1.5.0
 spacy[ja]==3.8.16
 stemming==1.0.1
 textacy==0.13.0
@@ -27,5 +27,5 @@ textstat==0.7.13
 tiktoken==0.14.0
 translate==3.8.1
 vaderSentiment==3.3.2
-scikit-optimize==0.10.2
+scikit-optimize==0.9.0
 sumy==0.13.0
